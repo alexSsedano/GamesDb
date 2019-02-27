@@ -1,0 +1,12 @@
+  <div *ngIf="hero" >{{hero.name}}</div>
+  <ul>
+    <li *ngFor="let element of elements">{{element}}</li>
+  </ul>
+  <button (click)="sayHi()">Say hi</button>
+
+  <input [(ngModel)]="name">
+  {{name}}
+  <a routerLink="/second">aaaaaaaaaaaaaaaaaaaaaaaang</a>
+
+
+<router-outlet></router-outlet>

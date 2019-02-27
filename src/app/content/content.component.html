@@ -1,0 +1,20 @@
+<main [ngStyle]=style>
+    
+  <div class="container" >
+      <button class="btn btn-secondary" (click)="cambiarColor()">Style</button>
+    <div class="row card-contain text-center m-auto">
+        
+        <div *ngFor="let game of gamesApi.games" class="card col-md-4 col-24 text-center mt-4" style="width: 18rem;">    
+          <img class="card-img-top" src="{{game.image.medium_url}}" alt="Card image cap" style="height: 18rem;">
+          
+          <div class="card-body">
+            <h5 class="card-title">{{ game.name }}</h5>
+            <p class="card-text">{{game.original_release_date }}</p>
+            <button routerLink="/info" type="button"(click)="gamesApi.setGame( game.name );" class="btn btn-primary">Info</button>
+          </div>
+        </div>
+      </div>
+  </div> 
+
+
+</main>

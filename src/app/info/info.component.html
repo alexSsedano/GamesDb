@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+          <img class="card-img-top" src="{{gamesApi.gameInfo.image.super_url}}" alt="Card image cap" > 
+      </div>
+      <div class="col">
+        <h1>Name: {{gamesApi.gameInfo.name}}</h1>
+        <p class="mb-0">Release date: {{gamesApi.gameInfo.original_release_date}}</p>
+        <h1>Platfoms:</h1>
+        <ul>
+        <li *ngFor="let platform of gamesApi.gameInfo.platforms">   
+            <p class="mb-0"> {{platform.name}}</p> 
+        </li>
+      </ul>
+      </div>
+    </div>
+    
+  </div>
+
+
+ 
+
+
